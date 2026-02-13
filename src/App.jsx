@@ -47,11 +47,11 @@ function App() {
     return (
       <>
         <Navbar></Navbar>
-        <div className="flex items-center justify-center h-24 md:h-32 gap-4">
+        <div className="flex items-center justify-center flex-wrap h-24 md:h-32 mt-5 gap-4">
           <Search value={search} onChange={setSearch} />
           <Filter value={region} onChange={setRegion} />
         </div>
-        <div className="flex flex-row flex-wrap gap-20 items-center justify-center">
+        <div className="flex flex-row flex-wrap gap-0.5 items-center justify-center">
           {data.length === 0 && (
             <div className="flex justify-center items-center">
               <svg
@@ -78,18 +78,20 @@ function App() {
           )}
 
           {filteredData.map((country) => (
-            <CountriesCards
-              key={country.cca3}
-              src={country.flags.png}
-              name={country.name.common}
-              Population={country.population.toLocaleString()}
-              Region={country.region}
-              Capital={country.capital?.[0] ?? "N/A"}
-              onClick={() => {
-                setSelectedCountry(country);
-                setDetailPanel(true);
-              }}
-            ></CountriesCards>
+            <div className="m-10">
+              <CountriesCards
+                key={country.cca3}
+                src={country.flags.png}
+                name={country.name.common}
+                Population={country.population.toLocaleString()}
+                Region={country.region}
+                Capital={country.capital?.[0] ?? "N/A"}
+                onClick={() => {
+                  setSelectedCountry(country);
+                  setDetailPanel(true);
+                }}
+              ></CountriesCards>
+            </div>
           ))}
         </div>
       </>

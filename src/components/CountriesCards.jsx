@@ -1,7 +1,7 @@
 const CountryCard = ({ src, name, Population, Region, Capital, onClick }) => {
   return (
     <div
-      className="flex flex-col w-64 shadow-lg overflow-hidden rounded-md dark:bg-(--theme-bg) dark:text-white bg-white text-black "
+      className="flex flex-col w-64 shadow-lg overflow-hidden rounded-md dark:bg-[#313946] dark:text-white bg-white text-black "
       onClick={onClick}
     >
       <img

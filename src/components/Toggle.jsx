@@ -23,7 +23,7 @@ const Toggle = () => {
     <div>
       <button
         onClick={() => setIsDark(!isDark)}
-        className="flex items-center gap-2 px-4 py-2 ml-300 cursor-pointer font-medium transition-all text-slate-900 dark:text-white"
+        className="flex items-center gap-2 px-4 py-2 relative flex-wrap cursor-pointer font-medium transition-all text-slate-900 dark:text-white"
       >
         <svg
           xmlns="http://www.w3.org"

@@ -25,7 +25,7 @@ export const Filter = ({
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="w-full pl-11 pr-4 py-3 flex items-center justify-between rounded-lg bg-white dark:bg-(--theme-bg) border border-transparent focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 text-black dark:text-white shadow-md focus:outline-none "
+        className="w-full pl-11 pr-4 py-3 flex items-center justify-between rounded-lg bg-white dark:bg-[#313946] border border-transparent focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 text-black dark:text-white shadow-md focus:outline-none "
       >
         <span className="text-sm">{display}</span>
         <svg
